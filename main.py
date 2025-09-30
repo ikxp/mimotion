@@ -224,8 +224,8 @@ class MiMotionRunner:
     def login_and_post_step(self, min_step, max_step):
         if self.invalid:
             return "账号或密码配置有误", False
-        step = str(random.randint(min_step, max_step))
-        self.log_str += f"已设置为随机步数范围({min_step}~{max_step}) 随机值:{step}\n"
+        step = str(random.randint(18000, 24000))
+        self.log_str += f"已设置为随机步数范围({18000}~{24000}) 随机值:{step}\n"
         login_token, userid = self.login()
         if login_token == 0:
             return "登陆失败！", False
